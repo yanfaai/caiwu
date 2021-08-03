@@ -36,8 +36,8 @@ class Ui_Form(My_window, QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self)
         My_window.__init__(self)
         self.move(10, 10)
-        self.resize(1455, 780)
-        self.setFixedSize(1455,780)
+        # self.resize(1455, 780)
+        self.setFixedSize(1380,780)
         self.brows = QWebEngineView(self)
 
         self.font=QtGui.QFont('微软YA')
@@ -47,10 +47,10 @@ class Ui_Form(My_window, QtWidgets.QWidget):
 
     def setupUi(self):
 
-        self.brows.setGeometry(385,40,1050,600)
+        self.brows.setGeometry(360,40,950,600)
 
         self.table = QtWidgets.QTableView(self)
-        self.table.setGeometry(QtCore.QRect(10, 40, 380, 600))
+        self.table.setGeometry(QtCore.QRect(10, 40, 350, 600))
         self.table.setFrameShape(QtWidgets.QFrame.NoFrame)
 
         self.horizontalLayoutWidget = QtWidgets.QWidget(self)

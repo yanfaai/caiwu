@@ -1,4 +1,4 @@
-from PyQt5.QtGui import QFont, QMovie
+from PyQt5.QtGui import QFont
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5 import QtCore, QtWidgets
 import os
@@ -26,20 +26,20 @@ class Ui_Form(Ui_windows):
     def __init__(self):
         # QtWidgets.QWidget.__init__(self)
         Ui_windows.__init__(self)  # 多继承，构造实例的时候，要继承2个父类
-        self.move(10, 5)
-        self.resize(1455, 780)
-        self.setFixedSize(1455,780)
+        self.move(10, 10)
+        # self.resize(1455, 780)
+        self.setFixedSize(1380,780)
         # super().setWindowOpacity(0.2)
         self.frame = QtWidgets.QFrame()
         self.GooLg = QWebEngineView(self)
 
     def setupUi(self):
-        self.GooLg.setGeometry(QtCore.QRect(390, 30, 1050, 550))
+        self.GooLg.setGeometry(QtCore.QRect(360, 30, 980, 520))
         self.tableView = QtWidgets.QTableView(self)
         self.tableView.setShowGrid(True)
         self.tableView.setFrameShape(self.frame.NoFrame)  # 设置外缘边框部显示
 
-        self.tableView.setGeometry(QtCore.QRect(0, 30, 391, 551))
+        self.tableView.setGeometry(QtCore.QRect(0, 30, 350, 520))
 
         self.horizontalLayoutWidget = QtWidgets.QWidget(self)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(450, 690, 800, 61))
